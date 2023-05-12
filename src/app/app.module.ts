@@ -7,6 +7,7 @@ import { PerfilAlumnoComponent } from './perfil-alumno/perfil-alumno.component';
 import { LoginComponent } from './login/login.component';
 import { InicioAlumnoComponent } from './inicio-alumno/inicio-alumno.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AlumnosComponent } from './alumnos/alumnos.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AppRoutingModule } from './app-routing.module';
     BackNotasComponent,
     PerfilAlumnoComponent,
     LoginComponent,
-    InicioAlumnoComponent
+    InicioAlumnoComponent,
+    AlumnosComponent
   ],
   imports: [
     BrowserModule,
