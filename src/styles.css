@@ -98,3 +98,8 @@ h1 {
   nav ul li:hover {
     background: #eca023;
   }
+  
+  footer {
+    position: absolute;
+    top: 100%;
+  }

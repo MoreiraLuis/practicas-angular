@@ -66,3 +66,9 @@
 .rwd-table th, .rwd-table td:before {
   color: #dd5;
 }
+
+table {
+  position: absolute;
+    left: 33%;
+    top: 30%;
+}

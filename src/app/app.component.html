@@ -1,14 +1,19 @@
-<h1>{{title}}</h1>
-
+<h1>{{title | uppercase}}</h1>
 <header>
   <nav>
-      <ul>
-  <li><a href="inicio">Inicio</a></li>
-  <li><a href="#">Login</a></li>
-  <li><a href="back">Back de notas</a></li>
-  <li><a href="perfil">Perfil del alumno</a></li>
- </ul>
+    <ul>
+      <li><a href="inicio">Inicio</a></li>
+      <li><a href="#">Login</a></li>
+      <li><a href="back">Back de notas</a></li>
+      <li><a href="perfil">Perfil del alumno</a></li>
+      <li><a href="#">Cerrar sesión</a></li>
+    </ul>
   </nav>
 </header>
 
+<footer>
+  <p>Hecho por: Luis Moreira</p>
+  <p>Información de contacto: <a href="mailto:luismanuelmoreiraesteban@gmail.com">luismanuelmoreiraesteban@gmail.com</a>.</p>
+  <address>Calle Doctor Ángel Pascual Megías, Alicante, España. C.P.: 03015</address>
+</footer>
 <router-outlet></router-outlet>

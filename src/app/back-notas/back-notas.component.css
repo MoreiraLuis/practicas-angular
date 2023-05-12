@@ -49,3 +49,9 @@
   .old_ie_wrapper tbody {
     height: auto;
   }
+
+  table {
+    position: absolute;
+    left: 30%;
+    top: 30%;
+  }
