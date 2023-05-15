@@ -26,64 +26,47 @@
   
   </datalist>
 <br>
-<h2>Listado de Alumnos del I.E.S Cavanilles</h2>
+<h2><strong>Listado de Alumnos del I.E.S Cavanilles</strong></h2>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <ul>
   <li *ngFor="let alumnos of Alumnos">
-    <p>{{alumnos.id}} {{alumnos.nombres}} {{alumnos.apellidos}} // Edad: {{alumnos.edad}} // Correo electrónico: {{alumnos.email}} // {{alumnos.telefono}} // DNI Nº: {{alumnos.DNI}} // Dirección: {{alumnos.direccion}} // Código Postal: {{alumnos.cp}}</p>
+    <p>{{alumnos.id}} {{alumnos.nombres}} {{alumnos.apellidos}} // Edad: {{alumnos.edad}} // Correo electrónico: {{alumnos.email}} // Teléfono: {{alumnos.telefono}} // DNI Nº: {{alumnos.DNI}} // Dirección: {{alumnos.direccion}} // Código Postal: {{alumnos.cp}}</p>
   </li>
 </ul>
 <br>
 <br>
     <table>
       <tr>
-        <td>&nbsp;</td>
-        <th>Mon</th>
-        <th>Tues</th>
-        <th>Wed</th>
-        <th>Thurs</th>
-        <th>Fri</th>
-        <th>Sat</th>
-        <th>Sun</th>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Edad</th>
+        <th>Correo electrónico</th>
+        <th>Teléfono</th>
+        <th>DNI</th>
+        <th>Dirección</th>
+        <th>Código Postal</th>
       </tr>
-      <tr>
-        <th>1st period</th>
-        <td>English</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>German</td>
-        <td>Dutch</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <th>2nd period</th>
-        <td>English</td>
-        <td>English</td>
-        <td>&nbsp;</td>
-        <td>German</td>
-        <td>Dutch</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <th>3rd period</th>
-        <td>&nbsp;</td>
-        <td>German</td>
-        <td>&nbsp;</td>
-        <td>German</td>
-        <td>Dutch</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <th>4th period</th>
-        <td>&nbsp;</td>
-        <td>English</td>
-        <td>&nbsp;</td>
-        <td>English</td>
-        <td>Dutch</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+      <tr *ngFor="let alumnos of Alumnos">
+        <td>{{alumnos.nombres}}</td>
+        <td>{{alumnos.apellidos}}</td>
+        <td>{{alumnos.edad}}</td>
+        <td>{{alumnos.email}}</td>
+        <td>{{alumnos.telefono}}</td>
+        <td>{{alumnos.DNI}}</td>
+        <td>{{alumnos.direccion}}</td>
+        <td>{{alumnos.cp}}</td>
       </tr>
     </table>
