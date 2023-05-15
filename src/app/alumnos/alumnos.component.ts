@@ -8,7 +8,8 @@ import { alumnos } from '../mock-alumnos';
   styleUrls: ['./alumnos.component.css']
 })
 export class AlumnosComponent implements OnInit {
-  alumnos = alumnos;
+  Alumnos = alumnos;
+
 
   constructor() { }
 

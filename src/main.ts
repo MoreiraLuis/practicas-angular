@@ -7,7 +7,7 @@ platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
 
   export interface Alumnos {
-    id: number;
+    id: String;
     nombres: String;
     apellidos: String;
     edad: number;

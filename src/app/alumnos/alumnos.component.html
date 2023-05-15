@@ -2,3 +2,88 @@
 <br>
 <br>
 <br>
+<form action="" method="post" target="_blank">
+
+    <p>
+  
+      Buscar en la base de datos de alumnos: <input type="search" name="busqueda" list="lista">
+  
+      <input type="submit" value="Buscar">
+  
+    </p>
+  
+  </form>
+  
+  <datalist id="lista">
+  
+    <option value="Luis">
+  
+    <option value="Maria">
+  
+    <option value="Jesus">
+  
+    <option value="Fulanito">
+  
+  </datalist>
+<br>
+<h2>Listado de Alumnos del I.E.S Cavanilles</h2>
+<br>
+<ul>
+  <li *ngFor="let alumnos of Alumnos">
+    <p>{{alumnos.id}} {{alumnos.nombres}} {{alumnos.apellidos}} // Edad: {{alumnos.edad}} // Correo electrónico: {{alumnos.email}} // {{alumnos.telefono}} // DNI Nº: {{alumnos.DNI}} // Dirección: {{alumnos.direccion}} // Código Postal: {{alumnos.cp}}</p>
+  </li>
+</ul>
+<br>
+<br>
+    <table>
+      <tr>
+        <td>&nbsp;</td>
+        <th>Mon</th>
+        <th>Tues</th>
+        <th>Wed</th>
+        <th>Thurs</th>
+        <th>Fri</th>
+        <th>Sat</th>
+        <th>Sun</th>
+      </tr>
+      <tr>
+        <th>1st period</th>
+        <td>English</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>German</td>
+        <td>Dutch</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>2nd period</th>
+        <td>English</td>
+        <td>English</td>
+        <td>&nbsp;</td>
+        <td>German</td>
+        <td>Dutch</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>3rd period</th>
+        <td>&nbsp;</td>
+        <td>German</td>
+        <td>&nbsp;</td>
+        <td>German</td>
+        <td>Dutch</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>4th period</th>
+        <td>&nbsp;</td>
+        <td>English</td>
+        <td>&nbsp;</td>
+        <td>English</td>
+        <td>Dutch</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
