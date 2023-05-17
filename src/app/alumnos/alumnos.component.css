@@ -1,15 +1,8 @@
-html {
-    font-family: sans-serif;
-  }
-
   table {
     border-collapse: collapse;
     border: 2px solid rgb(200,200,200);
     letter-spacing: 1px;
     font-size: 0.8rem;
-    position: absolute;
-    left: 15%;
-    top: 35%;
   }
 
   td, th {

@@ -18,4 +18,3 @@ export class AlumnosComponent implements OnInit {
 
 }
 export { alumnos };
-
