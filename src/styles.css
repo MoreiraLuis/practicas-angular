@@ -4,6 +4,7 @@ body {
   }
 
 html, body { height: 100%; }
+
 .contenedor-padre {
   display: flex;
   flex-flow: column;
@@ -24,4 +25,8 @@ html, body { height: 100%; }
 
 footer {
   background-color: gray;
+}
+
+* {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
