@@ -8,7 +8,7 @@ import { InicioAlumnoComponent } from './inicio-alumno/inicio-alumno.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AlumnosComponent } from './alumnos/alumnos.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
