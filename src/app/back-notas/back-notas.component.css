@@ -52,6 +52,9 @@
 
   table {
     position: absolute;
-    left: 30%;
-    top: 30%;
+    left: 25%;
+  }
+
+  h1 {
+    text-align: center;
   }
