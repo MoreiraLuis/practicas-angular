@@ -24,8 +24,8 @@
     width: 350px;
   }
   .fixed_headers thead {
-    background-color: #333;
-    color: #FDFDFD;
+    background-color: #858585;
+    color: #020101;
   }
   .fixed_headers thead tr {
     display: block;
@@ -38,7 +38,7 @@
     height: 300px;
   }
   .fixed_headers tbody tr:nth-child(even) {
-    background-color: #DDD;
+    background-color: #4d4d4d;
   }
   .old_ie_wrapper {
     height: 300px;
