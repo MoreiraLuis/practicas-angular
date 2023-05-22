@@ -16,6 +16,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { MensajeComponent } from './mensaje/mensaje.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
 
 @NgModule({
   declarations: [
@@ -38,6 +41,10 @@ import { MensajeComponent } from './mensaje/mensaje.component';
     MatButtonModule,
     MatExpansionModule,
     MatSidenavModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

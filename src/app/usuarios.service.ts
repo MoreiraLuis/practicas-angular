@@ -4,18 +4,28 @@ import { Observable, of } from 'rxjs';
 import { AlumnosComponent } from './alumnos/alumnos.component';
 import { Alumnos } from 'src/main';
 import { MensajeService } from './mensaje.service';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsuariosService {
   
-  getUsuarios(): Observable<Alumnos[]> {
-  const listaObservabledeUsuarios = of(alumnos);
-
-  //servicio de mensajes
-  this.mensajeService.add('Mensaje: Hemos recuperado los alumnos');
-  return listaObservabledeUsuarios;  
+  private usuariosUrl = 'api/usuarios';  // URL de la API
+  
+  private log(message: string) {
+    this.mensajeService.add(`UsuariosService: ${message}`);
   }
-  constructor(private mensajeService: MensajeService) { }
+  
+  getUsuarios(): Observable<Alumnos[]> {
+    //cambio de local a llamada HTTP
+
+    //const listaObservabledeUsuarios = of(alumnos);
+
+    //servicio de mensajes
+    this.mensajeService.add('Mensaje: Hemos recuperado los alumnos');
+    //return listaObservabledeUsuarios;
+    return this.http.get<Alumnos[]>(this.usuariosUrl)
+  }
+  constructor(private http: HttpClient, private mensajeService: MensajeService) { }
 }
