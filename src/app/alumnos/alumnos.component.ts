@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 //import { Alumnos } from 'src/main';
 import { alumnos } from '../mock-alumnos';
+import { UsuariosService } from '../usuarios.service';
 
 @Component({
   selector: 'app-alumnos',

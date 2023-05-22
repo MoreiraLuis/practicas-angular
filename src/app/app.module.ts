@@ -14,6 +14,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { UsuarioComponent } from './usuario/usuario.component';
+import { MensajeComponent } from './mensaje/mensaje.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     LoginComponent,
     InicioAlumnoComponent,
     AlumnosComponent,
+    UsuarioComponent,
+    MensajeComponent,
   ],
   imports: [
     BrowserModule,

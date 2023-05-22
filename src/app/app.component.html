@@ -8,10 +8,10 @@
         {{title | uppercase}}&nbsp;
       </span>
       <span>
-        <a mat-stroked-button href="perfil"><mat-icon color="primary">person</mat-icon>MI PERFIL</a>
+        <a mat-stroked-button href="perfil"><mat-icon color="">person</mat-icon>MI PERFIL</a>
       </span>
       <span>
-        <a mat-stroked-button href="#"><mat-icon color="primary">logout</mat-icon>CERRAR SESIÓN</a>
+        <a mat-stroked-button href="#"><mat-icon color="">logout</mat-icon>CERRAR SESIÓN</a>
       </span>
     </mat-toolbar-row>
   </mat-toolbar>
@@ -44,6 +44,10 @@
               <mat-icon color="primary">person</mat-icon>
               Mi perfil
             </a>
+            <a mat-list-item href='mensajes'>
+              <mat-icon color="accent">mail</mat-icon>
+              Mensajes
+            </a>
             <a mat-list-item href='#'>
               <mat-icon color="primary">logout</mat-icon>
               Cerrar sesión
@@ -57,7 +61,7 @@
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
-
+<app-mensaje></app-mensaje>
 <footer>
   <address><strong>Dirección: Avenida del Alcalde Lorenzo Carbonell, Alicante, España. C.P.: 0301x</strong></address>
 </footer>
