@@ -8,4 +8,3 @@ export const alumnos: Alumnos[] = [
   { id: 3, nombres: "María", apellidos: "Rodríguez", edad: 23, email: "mariarodriguez@ejemplo.es", contraseña: "123456789", telefono: 699045478, DNI: 4773592, direccion: "Av. Rambla", cp: 3015 },
   { id: 4, nombres: "Jorge", apellidos: "Álvarez Solís", edad: 30, email: "jorge@clicaonline.com", contraseña: "elmejor", telefono: 123456789, DNI: 12345678, direccion: "Av. Alcalde Lorenzo Carbonell", cp: 3008},
 ];
-

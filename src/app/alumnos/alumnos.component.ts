@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-//import { Alumnos } from 'src/main';
-import { alumnos } from '../mock-alumnos';
+import { Alumnos } from 'src/main';
+//import { alumnos } from '../mock-alumnos';
 import { UsuariosService } from '../usuarios.service';
 
 @Component({
@@ -9,13 +9,21 @@ import { UsuariosService } from '../usuarios.service';
   styleUrls: ['./alumnos.component.css']
 })
 export class AlumnosComponent implements OnInit {
-  Alumnos = alumnos;
+  Alumnos : any =[];
 
 
-  constructor() { }
+  
 
-  ngOnInit() {
+
+   getUsuarios(): void {
+    this.UsuariosDelService.getUsuarios()    
+    .subscribe(Alumnos => this.Alumnos = this.Alumnos);
+    
   }
 
+  ngOnInit() {
+    this.getUsuarios();
+  }
+
+  constructor(private UsuariosDelService: UsuariosService) {};
 }
-export { alumnos };
