@@ -39,7 +39,7 @@ export class UsuariosService {
     //return listaObservabledeUsuarios;
     return this.http.get<Alumnos[]>(this.usuariosUrl)
     .pipe(
-      tap(_ => this.log('Base de datos iniciada')),
+      tap(_ => this.log('¡Base de datos inicializada!')),
       catchError(this.handleError<Alumnos[]>('getUsuarios', []))
     );
   }
