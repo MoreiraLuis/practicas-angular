@@ -65,8 +65,8 @@
 }
 
 table {
-  position: absolute;
-  left: 30%;
+  margin: 0 auto;
+  border-collapse: collapse;
 }
 
 h1 {

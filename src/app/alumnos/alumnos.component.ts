@@ -11,10 +11,6 @@ import { UsuariosService } from '../usuarios.service';
 export class AlumnosComponent implements OnInit {
   Alumnos : any =[];
 
-
-  
-
-
    getUsuarios(): void {
     this.UsuariosDelService.getUsuarios()    
     .subscribe(Alumnos => this.Alumnos = this.Alumnos);
