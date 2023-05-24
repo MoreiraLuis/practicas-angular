@@ -1,26 +1,13 @@
-<form action="" method="post" target="_blank">
+<div class="grid grid-pad">
+  <a *ngFor="let alumnos of listaUsuarios" class="col-1-4"
+      routerLink="/usuario/{{alumnos.id}}">
+    <div class="module hero">
+      <h4>{{alumnos.name}}</h4>
+    </div>
+  </a>
+</div>
 
-    <p>
-  
-      <strong>BUSCADOR DE ALUMNOS </strong> <input type="search" name="busqueda" list="lista">
-  
-      <input type="submit" value="Buscar">
-  
-    </p>
-  
-  </form>
-  
-  <datalist id="lista">
-  
-    <option value="Luis">
-  
-    <option value="Maria">
-  
-    <option value="Jesus">
-  
-    <option value="Fulanito">
-  
-  </datalist>
+<app-busqueda></app-busqueda>
 <br>
 <h2><strong>Listado de Alumnos del I.E.S Cavanilles</strong></h2>
 <br>

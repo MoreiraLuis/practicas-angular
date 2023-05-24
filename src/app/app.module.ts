@@ -19,6 +19,7 @@ import { MensajeComponent } from './mensaje/mensaje.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import { BusquedaComponent } from './busqueda/busqueda.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { InMemoryDataService } from './in-memory-data.service';
     AlumnosComponent,
     UsuarioComponent,
     MensajeComponent,
+    BusquedaComponent,
   ],
   imports: [
     BrowserModule,

@@ -39,9 +39,23 @@ export class UsuariosService {
     //return listaObservabledeUsuarios;
     return this.http.get<Alumnos[]>(this.usuariosUrl)
     .pipe(
-      tap(_ => this.log('fetched Alumnos'+this.http.get<Alumnos[]>(this.usuariosUrl)+" ")),
+      tap(_ => this.log('Base de datos iniciada')),
       catchError(this.handleError<Alumnos[]>('getUsuarios', []))
     );
   }
+
+  searchAlumnos(term: string): Observable<Alumnos[]> {
+    if (!term.trim()) {
+      // if not search term, return empty hero array.
+      return of([]);
+    }
+    return this.http.get<Alumnos[]>(`${this.usuariosUrl}/?nombres=${term}`).pipe(
+      tap(x => x.length ?
+         this.log(`Se encontraron alumnos con: "${term}"`) :
+         this.log(`La búsqueda no ha duelto resultados con "${term}"`)),
+      catchError(this.handleError<Alumnos[]>('searchAlumnos', []))
+    );
+  }
+  
   constructor(private http: HttpClient, private mensajeService: MensajeService) { }
 }
