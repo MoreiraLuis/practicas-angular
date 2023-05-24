@@ -39,8 +39,8 @@ export class UsuariosService {
     //return listaObservabledeUsuarios;
     return this.http.get<Alumnos[]>(this.usuariosUrl)
     .pipe(
-      tap(_ => this.log('fetched Alumnos')),
-      catchError(this.handleError<Alumnos[]>('getAlumnos', []))
+      tap(_ => this.log('fetched Alumnos'+this.http.get<Alumnos[]>(this.usuariosUrl)+" ")),
+      catchError(this.handleError<Alumnos[]>('getUsuarios', []))
     );
   }
   constructor(private http: HttpClient, private mensajeService: MensajeService) { }
