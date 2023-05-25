@@ -14,6 +14,10 @@ export class UsuariosService {
   
   private usuariosUrl = 'api/usuariosDb';  // URL de la API 
 
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
+
   private log(message: string) {
     this.mensajeService.add(`UsuariosService: ${message}`);
   }
@@ -55,6 +59,20 @@ export class UsuariosService {
       catchError(this.handleError<Alumnos[]>('searchAlumnos', []))
     );
   }
+  
+  addHero(alumnos: Alumnos): Observable<Alumnos> {
+    return this.http.post<Alumnos>(this.usuariosUrl, alumnos, this.httpOptions).pipe(
+      tap((alumnos: Alumnos) => this.log(`Alumno añadido con ID: ${alumnos.id}`)),
+      catchError(this.handleError<Alumnos>('addHero'))
+    );
+  }
+
+  updateHero(alumnos: Alumnos): Observable<any> {
+  return this.http.put(this.usuariosUrl, alumnos, this.httpOptions).pipe(
+    tap(_ => this.log(`Alumno actualizado con ID: ${alumnos.id}`)),
+    catchError(this.handleError<any>('updateHero'))
+  );
+}
   
   constructor(private http: HttpClient, private mensajeService: MensajeService) { }
 }

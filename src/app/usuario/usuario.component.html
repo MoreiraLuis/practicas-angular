@@ -34,3 +34,16 @@
         <td>{{alumnos.cp}}</td>
       </tr>
     </table>
+<br>
+<br>
+<h1>AGREGAR ALUMNOS</h1>
+    <button (click)="save()">Guardar</button>
+    <div>
+      <label>Nombre del alumno:
+        <input #NombreAlumno />
+      </label>
+      <!-- (click) passes input value to add() and then clears the input -->
+      <button (click)="add(NombreAlumno.value); NombreAlumno.value=''">
+        Agregar
+      </button>
+    </div>
